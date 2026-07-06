@@ -1,8 +1,104 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Boogaloo&display=swap');
-.navbar{
-    font-family: 'Boogaloo', cursive;
-    font-size: 15pt;
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap');
 
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
 
+/* Glassmorphism Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+/* Glassmorphism Cards/Boxes */
+.box,
+.section,
+.container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.column .box {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.column .box:hover {
+    transform: translateY(-5px);
+}
+
+.title,
+.subtitle {
+    color: #fff !important;
+}
+
+/* Inputs and Buttons */
+.input {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+    backdrop-filter: blur(5px);
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.button.is-info {
+    background: rgba(0, 209, 178, 0.7) !important;
+    border: none;
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.button.is-info:hover {
+    background: rgba(0, 209, 178, 0.9) !important;
+}
+
+.delete {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.delete:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Typography fix */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #fff;
+}
+
+/* Logo container transparency */
+.column.is-offset-4 img {
+    margin-bottom: 20px;
+    /* Optional: add filter to make logo white if needed, but keeping original for now */
 }

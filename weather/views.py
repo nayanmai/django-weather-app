@@ -29,7 +29,7 @@ def index(request):
 
     """
 
-    new_city, url, token_key = None, '', config('TOKEN_KEY', '')
+    new_city, url, token_key = None, '', config('TOKEN_KEY', '83aeb8d3fb2eb9eb18c0dfda4611c55f')
     err_msg, message, message_class = '', '', ''
     if request.method == 'POST':
         form = CityForm(request.POST)
@@ -42,7 +42,7 @@ def index(request):
                 if r['cod'] == 200:
                     form.save()
                 else:
-                    err_msg = "City doesnt exist"
+                    err_msg = r.get('message', 'Error fetching weather data')
             else:
                 err_msg = "City already exist in the database!"
         if err_msg :
